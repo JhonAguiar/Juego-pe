@@ -2,7 +2,9 @@
     font-family: gameFont;
     src: url("../fonts/PressStart2P-vaV7.ttf");
 }
-
+/* #audio{
+    display: none
+} */
 *{
     font-family: gameFont;
     padding: 0px;

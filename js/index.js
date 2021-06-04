@@ -1,7 +1,12 @@
 contador = 0;
+var audio;
+var audio2;
+
 
 
 function comenzar(){
+    audio = document.getElementById("audio");
+    audio.play();
     document.getElementById("scena1").style.display = "none";
     document.getElementById("scena2").style.display = "block";
     continuar1();
@@ -37,6 +42,9 @@ function seleccionar(a){
         document.getElementById("scena12").style.display = "block"; 
     }else{
         document.getElementById("scenaend").style.display = "block"; 
+        audio.pause();
+        audio2 = document.getElementById("audio2");
+        audio2.play();
     }
 }
 
@@ -53,6 +61,9 @@ function seleccionarHerr(b){
         document.getElementById("scena13").style.display = "block"; 
     }else{
         document.getElementById("scenaend").style.display = "block"; 
+        audio.pause();
+        audio2 = document.getElementById("audio2");
+        audio2.play();
     }
 }
 
