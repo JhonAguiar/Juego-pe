@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juego Canibales</title>
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div id="scena1" class="scenas">
+           <h1>Bienvenidos</h1>
+
+           <div id="comenzar" onclick="comenzar()">
+               COMENZAR
+           </div>
+        </div>
+        <div id="scena2" class="scenas">
+            <div id="texto-scena2">
+                <p>En una travesía organizada por la Universidad Distrital,</p>
+                <p>un grupo de adolescentes, deciden irse de excursión al Amazonas </p> 
+                <p>con el objetivo de encontrar un diamante escondido en la selva. </p> 
+                <p>Para lo cual la necesidad de un guía turístico era primordial</p> 
+                <p>ya que sin él la búsqueda será más difícil. Se emprende una </p>
+                <p>caminata a la selva, ya en el segundo día los jóvenes son</p>
+                <p> sorprendidos por una tribu de caníbales, quienes los encierran <span>|</span></p>
+            </div>
+            <div id="continuar" onclick="continuar3()" >
+                Continuar
+            </div>
+        </div>
+        <div id="scena3" class="scenas">
+            <h1>Los canibales han seleccionado al guia como su objetivo debes escapar de la zona rapidamente</h1>
+            <br><br><br>
+            <h2>Selecciona un personaje</h2>
+            <br><br>
+            <div class="contenedor-img">
+                <h3>Mujer Bella</h3>
+                <p>(medica) problemas visión</p>
+                <br>
+                <div class="mujer"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('mujer')">Seleccionar</button>
+            </div>
+            <div class="contenedor-img">
+                <h3>Fuerte</h3>
+                <p>(Obeso) supervivencia</p>
+                <br>
+                <div class="fuerte"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('fuerte')">Seleccionar</button>
+            </div>
+            <div class="contenedor-img">
+                <h3>Alzhaimer </h3>
+                <p>cada 2 horas(Conoce zona)</p>
+                <br>
+                <div class="alzheimer"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('alzheimer')">Seleccionar</button>
+            </div>
+            <div class="contenedor-img">
+                <h3>Interprete </h3>
+                <p>No puede correr</p>
+                <br>
+                <div class="interprete"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('interprete')" >Seleccionar</button>
+            </div>
+            <div class="contenedor-img">
+                <h3>Guia</h3>
+                <p>Debe huir rapido</p>
+                <br>
+                <div class="guia"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('guia')">Seleccionar</button>
+            </div>
+        </div>
+        <div id="scena4" class="scenas">
+            <h1>Seleccionaste correctamente al personaje, debes escojer una herramienta para poder escapar rapidamente</h1>
+            <br><br><br>
+            <h2>Selecciona una herramienta</h2>
+            <br>
+            <div class="contenedor-sc4">
+                <h3>Quipitos</h3>
+                <div class="quipitos"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('quipitos')">Seleccionar</button>
+            </div>
+            <div class="contenedor-sc4">
+                <h3>Linterna 1</h3>
+                <div class="linterna"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('linterna')">Seleccionar</button>
+            </div>
+            <div class="contenedor-sc4">
+                <h3>Linterna 2</h3>
+                <div class="linterna"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('linterna')">Seleccionar</button>
+            </div>
+            <div class="contenedor-sc4">
+                <h3>Cuchara</h3>
+                <div class="cuchara"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('cuchara')">Seleccionar</button>
+            </div>
+        </div>
+        <div id="scena5" class="scenas">
+            <div class="contenedor-sc5">
+                <h3>Hombre Fuerte</h3>
+                <br><br>
+                <div class="fuerte"></div>
+            </div>
+            <div class="contenedor-sc5">
+                <h3>Cuchillo</h3>
+                <br><br>
+                <div class="cuchillo"></div>
+            </div>
+            <div class="contenedor-sc8">
+                <div class="contenedor_scenes">
+                    El hombre fuerte elabora con la cuchara un cuchillo, <br>
+                    el cual utilizara para romper la cerca que tienen los canibales , esto permitira al resto del equipo escapar.  
+                </div>
+                <div id="continuar" onclick="continuar4()">Continuar</div>
+            </div>
+        </div>
+        <div id="scena6" class="scenas">
+            <h1>El hombre fuerte ha escapado selecciona el siguiente personaje que crees escapara mas rapido</h1>
+            <br><br><br>
+            <h2>Selecciona un personaje</h2>
+            <br><br>
+            <div class="contenedor-img2">
+                <h3>Mujer Bella</h3>
+                <p>(medica) problemas visión</p>
+                <br>
+                <div class="mujer"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('mujer')">Seleccionar</button>
+            </div>
+            <div class="contenedor-img2">
+                <h3>Alzhaimer </h3>
+                <p>cada 2 horas(Conoce zona)</p>
+                <br>
+                <div class="alzheimer"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('alzheimer')">Seleccionar</button>
+            </div>
+            <div class="contenedor-img2">
+                <h3>Interprete </h3>
+                <p>No puede correr</p>
+                <br>
+                <div class="interprete"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('interprete')" >Seleccionar</button>
+            </div>
+            <div class="contenedor-img2">
+                <h3>Guia</h3>
+                <p>Debe huir rapido</p>
+                <br>
+                <div class="guia"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('guia')">Seleccionar</button>
+            </div>
+        </div>
+        <div id="scena7" class="scenas">
+            <div class="contenedor-sc5">
+                <h3>Mujer Bonita</h3>
+                <br><br>
+                <div class="mujer"></div>
+            </div>
+            <div class="contenedor-sc5">
+                <h3>Muñecos</h3>
+                <br><br>
+                <div class="muneca"></div>
+            </div>
+            <div class="contenedor-sc8">
+                <div class="contenedor_scenes">
+                    La mujer bonita elabora una serie de muñecos para engañar a los canibales, mientras<br>
+                    que todos duermen y con el señuelo puesto se escurrira por la cerca rota y escapara con facilidad  
+                </div>
+                <div id="continuar" onclick="continuar5()">Continuar</div>
+            </div>
+        </div>
+        <div id="scena8" class="scenas">
+            <h1>La mujer ha escapado selecciona el siguiente personaje que crees escapara mas rapido</h1>
+            <br><br><br>
+            <h2>Selecciona un personaje</h2>
+            <br><br>
+            <div class="contenedor-img3">
+                <h3>Alzhaimer </h3>
+                <p>cada 2 horas(Conoce zona)</p>
+                <br>
+                <div class="alzheimer"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('alzheimer')">Seleccionar</button>
+            </div>
+            <div class="contenedor-img3">
+                <h3>Interprete </h3>
+                <p>No puede correr</p>
+                <br>
+                <div class="interprete"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('interprete')" >Seleccionar</button>
+            </div>
+            <div class="contenedor-img3">
+                <h3>Guia</h3>
+                <p>Debe huir rapido</p>
+                <br>
+                <div class="guia"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('guia')">Seleccionar</button>
+            </div>
+        </div>
+        <div id="scena9" class="scenas">
+            <h1>Seleccionaste correctamente al personaje, debes escojer una herramienta para poder escapar rapidamente</h1>
+            <br><br><br>
+            <h2>Selecciona una herramienta</h2>
+            <br>
+            <div class="contenedor-sc6">
+                <h3>Quipitos</h3>
+                <div class="quipitos"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('quipitos')">Seleccionar</button>
+            </div>
+            <div class="contenedor-sc6">
+                <h3>Linterna 1</h3>
+                <div class="linterna"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('linterna')">Seleccionar</button>
+            </div>
+            <div class="contenedor-sc6">
+                <h3>Linterna 2</h3>
+                <div class="linterna"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('linterna')">Seleccionar</button>
+            </div>
+        </div>
+        <div id="scena10" class="scenas">
+            <div class="contenedor-sc5">
+                <h3>Hombre Con Alzhaimer</h3>
+                <br><br>
+                <div class="alzheimer"></div>
+            </div>
+            <div class="contenedor-sc5">
+                <h3>Linterna</h3>
+                <br><br>
+                <div class="linterna"></div>
+            </div>
+            <div class="contenedor-sc8">
+                <div class="contenedor_scenes">
+                    El hombre con Alzhaimer conoce la zona muy bien , fue el que planeo el escape con el hombre fuerte para escapar de la selva,
+                    Usara la linterna para salir inmediatamente sale la mujer ya que el reflejo de su luz la ayudara con su poca vista
+                </div>
+                <div id="continuar" onclick="continuar6()">Continuar</div>
+            </div>
+        </div>
+        <div id="scena11" class="scenas">
+            <h1>El hombre con alzheimer ha escapado ,escoge el siguiente personaje que crees escapara mas rapido</h1>
+            <br><br><br>
+            <h2>Selecciona un personaje</h2>
+            <br><br>
+            <div class="contenedor-img4">
+                <h3>Interprete </h3>
+                <p>No puede correr</p>
+                <br>
+                <div class="interprete"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('interprete')" >Seleccionar</button>
+            </div>
+            <div class="contenedor-img4">
+                <h3>Guia</h3>
+                <p>Debe huir rapido</p>
+                <br>
+                <div class="guia"></div>
+                <br>
+                <button class="btn-seleccionar" onclick="seleccionar('guia')">Seleccionar</button>
+            </div>
+        </div>
+        <div id="scena12" class="scenas">
+            <h1>Seleccionaste correctamente al personaje, debes escojer una herramienta para poder escapar rapidamente</h1>
+            <br><br><br>
+            <h2>Selecciona una herramienta</h2>
+            <br>
+            <div class="contenedor-sc7">
+                <h3>Quipitos</h3>
+                <div class="quipitos"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('quipitos')">Seleccionar</button>
+            </div>
+            <div class="contenedor-sc7">
+                <h3>Linterna 1</h3>
+                <div class="linterna"></div>
+                <br><br>
+                <button class="btn-seleccionar" onclick="seleccionarHerr('linterna')">Seleccionar</button>
+            </div>
+        </div>
+        <div id="scena13" class="scenas">
+            <div class="contenedor-sc5">
+                <h3>Interprete</h3>
+                <br><br>
+                <div class="alzheimer"></div>
+            </div>
+            <div class="contenedor-sc5">
+                <h3>Quipitos</h3>
+                <br><br>
+                <div class="quipitos"></div>
+            </div>
+            <div class="contenedor-sc8">
+                <div class="contenedor_scenes">
+                    El interprete va a negociar su salida con los quipitos ya que al verlo , los canibales son engañados 
+                    por el haciendolos creer que pueden hacer polvora con ellos debido a su sonido, una vez afuera espera al guia en un punto.
+                </div>
+                <div id="continuar" onclick="continuar7()">Continuar</div>
+            </div>
+        </div>
+        <div id="scena14" class="scenas">
+            <div class="contenedor-sc5">
+                <h3>Guia</h3>
+                <br><br>
+                <div class="guia"></div>
+            </div>
+            <div class="contenedor-sc5">
+                <h3>Canibal</h3>
+                <br><br>
+                <div class="canibal"></div>
+            </div>
+            <div class="contenedor-sc8">
+                <div class="contenedor_scenes">
+                    El Guia tomara la linterna , debido a que el interprete lo dejo por que el podia salir mas rapido y como el no podia correr,
+                    se ayudarian juntos a salir y el guia es el segundo que mas conoce la zona.
+                </div>
+                <div id="continuar" onclick="continuar8()">Continuar</div>
+            </div>
+        </div>
+        <div id="scena15" class="scenas">
+            <h1>!GANASTE¡</h1>
+            <br><br><br>
+            <h2>Tu equipó llego a la meta</h2>
+            <br><br>
+            <div class="contenedor-img">
+                <h3>Mujer Bella</h3>
+                <p>(medica) problemas visión</p>
+                <br>
+                <div class="mujer"></div>
+                <br>
+            </div>
+            <div class="contenedor-img">
+                <h3>Fuerte</h3>
+                <p>(Obeso) supervivencia</p>
+                <br>
+                <div class="fuerte"></div>
+                <br>
+            </div>
+            <div class="contenedor-img">
+                <h3>Alzhaimer </h3>
+                <p>cada 2 horas(Conoce zona)</p>
+                <br>
+                <div class="alzheimer"></div>
+                <br>
+            </div>
+            <div class="contenedor-img">
+                <h3>Interprete </h3>
+                <p>No puede correr</p>
+                <br>
+                <div class="interprete"></div>
+                <br>
+            </div>
+            <div class="contenedor-img">
+                <h3>Guia</h3>
+                <p>Debe huir rapido</p>
+                <br>
+                <div class="guia"></div>
+                <br>
+            </div>
+            <div id="continuar" onclick="continuar9()">Continuar</div>
+        </div>
+        <div id="scenawinner" class="scenas">
+            <h1>GANASTE</h1>
+            <br><br>
+            <div class="ganaste"></div>
+            <br><br>
+            <h2>Creditos</h2><br>
+            <p>
+                Jhon Aguiar Moreno<br>
+                Christian Camilo Perez<br>
+                Jhonatan Campos<br>
+                Javier Fernandez<br>
+                Jorge A. Sanchez
+            </p>
+        </div>
+        <div id="scenaend" class="scenas">
+            <h4>GAME OVER</h4>
+            <br>
+            <br>
+            <br>
+            <button class="btn-seleccionar2" onclick="reiniciar()"> Volver a empezar</button>
+        </div>
+        
+    </body>
+</html>
